@@ -1,7 +1,8 @@
 body {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background:   radial-gradient(circle, #fbfbfb, #e0e1e2, #c4c8c9, #abb0ad, #969792);
     font-family: 'Poppins', sans-serif;
 }
+
 
 #form {
     width: 300px;
@@ -57,4 +58,13 @@ body {
     color: #ff3860;
     font-size: 9px;
     height: 13px;
+}
+
+@media (max-width: 600px){
+    .container{
+        min-width: 280px;
+    }
+    #form {
+        flex-direction: column-reverse;
+    }
 }
