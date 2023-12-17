@@ -84,3 +84,4 @@ Terdapat dua buah endpoint yang dikerjakan diantaranya:
 
 ## Pengujian Otomasi *(Automation Testing)*
 Penyelesaian untuk *section* ini dengan skrip otomatis **Sleenium** dimana pada prinsipnya program yang dibuat pada ```index-test.js``` akan melakukan pengujian secara *end-to-end* terhadap form registrasi. **Selenium** nantinya akan melakukan pengujian secara *Integrated Development Environment* **(IDE)** atas browser *Google Chrome* dengan mengisikan atas *field*-*field* seperti **nama**, **email**, dan **mobile_number**. Dengan mengharapkan *return value* atas validasi dari **Pengembangan FrontEnd** berupa *class css* ketika *success* maka pengujian pun selesai. 
+Dalam menjalankan pengujian ini dapat dengan command ```node index-test.js```
