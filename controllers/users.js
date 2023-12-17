@@ -1,15 +1,11 @@
 const Joi = require('joi');
 const tempData = require('../domain/users');
+const helper = require('../helpers/helper')
 
 function getUsers(req, res) {
     //return all data with the json
-    // res.json(tempData)
-    res.status(200).json({
-        success: true,
-        code: 200,
-        message: "Success retrieve all data",
-        data: tempData
-    });
+    helper(res, 200, 1, "Success retrieve all data", tempData);
+
 }
 
 function saveUsers(req, res) {
@@ -26,23 +22,13 @@ function saveUsers(req, res) {
     const valid = error == null;
     if(!valid){
         // return json error msg 
-        res.status(422).json({
-            success: false,
-            code: 422,
-            message: 'Invalid Payload',
-            data: req.body
-        });
+        helper(res, 422, 0, "Invalid Payload", value);
     } else{
         // save register user to tempArray
         tempData.push(value);
 
         // return the all data
-        res.status(201).json({
-            success: true,
-            code: 201,
-            message: "User registration was successful",
-            data: value,
-        });
+        helper(res, 201, 0, "User registration was successful", value);
     }
 }
 
